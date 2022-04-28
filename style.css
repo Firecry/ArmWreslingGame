@@ -1,0 +1,68 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    background-color: #f6f7f6;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    width: 800px;
+    height: 800px;
+}
+#arm{
+    text-align: center;
+    height: 600px;
+}
+#clicker{
+    text-align: center;
+    height: 200px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-size: 3rem;
+    line-height: 190px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .2s;
+}
+#clicker:hover{
+    transition: .2s;
+    background-color: rgb(32, 32, 32);
+}
+#timer{
+    position: absolute;
+    top: 740px;
+    left: 1400px;
+    font-size: 3rem;
+}
+#ending{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 8rem 3rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+#img{
+    transform: perspective(100em) rotateX(50deg);
+}
+#objective{
+    position: absolute;
+    top: 660px;
+    left: 480px;
+    height: 10px;
+    width: 100vh;
+    border-radius: 10px;
+    transition: background-color 1s;
+}
