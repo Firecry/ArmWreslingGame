@@ -56,11 +56,9 @@ let time = `${min}:${sec}:${msec}`
 let objective = sila / 1000000 * 100
 let result = parseFloat(objective).toFixed(0)
 
-if(result>=90||result<=0){
-
-}
-else{
-    document.getElementById('img').style.transform = `rotateX(${result}deg)`
+if(!(result>=100||result<0)){
+    document.getElementById('img').style.transform = `rotateX(${result-20}deg)`
+    document.getElementById('theme').innerHTML = `${result}`
 }
 
 if(result>66){
@@ -75,8 +73,9 @@ document.getElementById('objective').style.width = `${sila / 1000000 * 100}vh`
 document.getElementById('clicker').innerHTML = `Strength: ${trudnosc}`
 document.getElementById('timer').innerHTML = `${time}`
 
-if(sila >= 1000000){
+if(sila>1000000){
     clearInterval(czas)
+    document.getElementById('theme').innerHTML = `100`
     document.getElementById('ending').style.display = "inherit"
     document.getElementById('grid').style.filter = "blur(2px)"
     document.getElementById('clicker').removeAttribute("onclick");
@@ -84,8 +83,9 @@ if(sila >= 1000000){
     document.getElementById('ending').innerHTML = `You lost this one D: Good luck next time! Time: ${time}`
     sila = 0
 }
-else if(sila<=0){
+else if(sila<0){
     clearInterval(czas)
+    document.getElementById('theme').innerHTML = `0`
     document.getElementById('ending').style.display = "inherit"
     document.getElementById('grid').style.filter = "blur(2px)"
     document.getElementById('clicker').removeAttribute("onclick");
