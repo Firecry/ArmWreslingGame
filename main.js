@@ -1,6 +1,6 @@
 let sila = 500000
 let klik = 100
-let trudnosc = 0
+let trudnosc = 10000
 var msec = 0
 var sec = '0' + 0
 var min = '0' + 0
@@ -14,7 +14,7 @@ function ups(){
         trudnosc++
 }
 
-setInterval(()=>{
+var czas = setInterval(()=>{
     msec++
 
     if(msec==100){
@@ -76,6 +76,7 @@ document.getElementById('clicker').innerHTML = `Strength: ${trudnosc}`
 document.getElementById('timer').innerHTML = `${time}`
 
 if(sila >= 1000000){
+    clearInterval(czas)
     document.getElementById('ending').style.display = "inherit"
     document.getElementById('grid').style.filter = "blur(2px)"
     document.getElementById('clicker').removeAttribute("onclick");
@@ -84,6 +85,7 @@ if(sila >= 1000000){
     sila = 0
 }
 else if(sila<=0){
+    clearInterval(czas)
     document.getElementById('ending').style.display = "inherit"
     document.getElementById('grid').style.filter = "blur(2px)"
     document.getElementById('clicker').removeAttribute("onclick");
