@@ -1,6 +1,6 @@
 let sila = 500000
 let klik = 100
-let trudnosc = 10000
+let trudnosc = 0
 var msec = 0
 var sec = '0' + 0
 var min = '0' + 0
