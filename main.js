@@ -58,7 +58,7 @@ let result = parseFloat(objective).toFixed(0)
 
 if(!(result>=100||result<0)){
     document.getElementById('img').style.transform = `rotateX(${result-20}deg)`
-    document.getElementById('theme').innerHTML = `${result}`
+    document.getElementById('objective').innerHTML = `${result}`
 }
 
 if(result>66){

@@ -10,11 +10,9 @@ html, body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 #grid{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    width: 800px;
-    height: 800px;
+    display: flex;
+    background-color: red;
+    flex-direction: column;
 }
 #arm{
     text-align: center;
@@ -54,15 +52,6 @@ html, body{
     display: none;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
-#objective{
-    position: absolute;
-    top: 640px;
-    left: 480px;
-    height: 30px;
-    width: 100vh;
-    border-radius: 10px;
-    transition: background-color 1s;
-}
 
 #img{
     transform: perspective(100em) rotateX(100deg);
@@ -73,9 +62,7 @@ html, body{
 }
 
 #theme{
-    position: absolute;
-    top: 640px;
-    left: 480px;
+    position: relative;
     height: 30px;
     width: 100vh;
     border-radius: 10px;
@@ -83,4 +70,11 @@ html, body{
     font-size: 2vh;
     text-align: center;
     font-weight: 640;
+    overflow: hidden;
+}
+#objective{
+    border-radius: 10px;
+    transition: background-color 1s;
+    width: 0;
+    height: 10px;
 }
