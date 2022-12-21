@@ -58,24 +58,24 @@ let result = parseFloat(objective).toFixed(0)
 
 if(!(result>=100||result<0)){
     document.getElementById('img').style.transform = `rotateX(${result-20}deg)`
-    document.getElementById('objective').innerHTML = `${result}`
+    document.getElementById('theme').innerHTML = `${result}`
 }
 
-if(result>66){
+if(result>89){
     document.getElementById('objective').style.background = "red"
 }
-else if(result<33){
+else if(result<20){
     document.getElementById('objective').style.background = "lime"
 }
 else{document.getElementById('objective').style.background = "orange"}
 
-document.getElementById('objective').style.width = `${sila / 1000000 * 100}vh`
+document.getElementById('objective').style.width = `${sila / 1000000 * 100}%`
 document.getElementById('clicker').innerHTML = `Strength: ${trudnosc}`
 document.getElementById('timer').innerHTML = `${time}`
 
 if(sila>1000000){
     clearInterval(czas)
-    document.getElementById('theme').innerHTML = `100`
+    document.getElementById('objective').innerHTML = `100`
     document.getElementById('ending').style.display = "inherit"
     document.getElementById('grid').style.filter = "blur(2px)"
     document.getElementById('clicker').removeAttribute("onclick");
@@ -85,7 +85,7 @@ if(sila>1000000){
 }
 else if(sila<0){
     clearInterval(czas)
-    document.getElementById('theme').innerHTML = `0`
+    document.getElementById('objective').innerHTML = `0`
     document.getElementById('ending').style.display = "inherit"
     document.getElementById('grid').style.filter = "blur(2px)"
     document.getElementById('clicker').removeAttribute("onclick");
