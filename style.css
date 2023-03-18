@@ -55,7 +55,7 @@ html, body{
 
 #img{
     transform: perspective(100em) rotateX(100deg);
-    background-image: url(/arm.jpg);
+    background-image: url(arm.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
